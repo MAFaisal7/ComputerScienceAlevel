@@ -1,0 +1,56 @@
+Module Module1
+
+    Sub Main()
+        'Populated Lookup
+        Dim lookup(127) As String
+        Dim a As Integer
+        Dim b As Char
+        a = 0
+        For count = 0 To 127
+            a = 0
+            a = count - 10
+            If a < 0 Then
+                lookup(count) = Chr(127 + a)
+            Else
+                lookup(count) = Chr(a)
+            End If
+        Next
+        'For x = 0 To 127
+        'Console.WriteLine(lookup(x))
+        ' Console.ReadKey()
+        ' Next
+
+        'Taking input from the user
+        'Dim cipherchar2 As Char
+        'Console.WriteLine("Oye char to bata")
+        'cipherchar2 = Console.ReadLine()
+
+        b = decrypt("d", lookup)
+        Console.WriteLine(b)
+        Console.ReadKey()
+
+
+
+    End Sub
+    Function decrypt(ByVal cipherchar As Char, ByVal lookup As Array)
+
+        Dim found As Boolean
+        Dim index As Integer
+        Dim originalchar As Char
+
+        index = 1
+        found = False
+
+        While found = False
+            If lookup(index) = cipherchar Then
+                found = True
+            Else
+                index = index + 1
+
+            End If
+        End While
+        originalchar = Chr(index)
+        Return originalchar
+    End Function
+
+End Module
