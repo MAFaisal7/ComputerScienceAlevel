@@ -1,0 +1,27 @@
+Sub Main()
+        Dim arr() = {"", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "@", "7", "$", "%", "2", "*"}
+        Dim pt As String = "BAD"
+        Dim temp As String
+        temp = EncryptString(arr, pt)
+        Console.Write("the encrypted text :" & temp)
+        Console.ReadKey()
+    End Sub
+
+    Function EncryptString(ByVal LookUp As Array, ByVal PlainText As String) As String
+
+        Dim OldChar, NewChar As Char
+        Dim OldCharValue As Integer
+        Dim OutString As String
+
+        'first initialise the return string
+
+        OutString = "" 'initialise the return string
+        'loop through PlainText to produce OutString
+        For n = 1 To Len(PlainText) 'from first to last character
+            OldChar = Mid(PlainText, n, 1) 'get next character
+            OldCharValue = Asc(OldChar) 'find the ASCII value
+            NewChar = LookUp(OldCharValue) 'look up substitute character
+            OutString = OutString & NewChar ' concatenate to OutString
+        Next
+        Return OutString 'EncryptString Å© OutString
+    End Function
