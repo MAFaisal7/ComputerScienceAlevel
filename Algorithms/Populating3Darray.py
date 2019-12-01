@@ -5,10 +5,10 @@ l = 4
 w = 3
 h = 2
 
-# Setting Dimenstions of a python #D array
+# Setting Dimenstions of a python 3D array
 def list_dim(l,w,h):
     my_array = [[['a' for m in range(l)] for i in range(w)] for k in range(h)]  # read list comprehensions
-    return my_array  # pprint basically displays list in proper format
+    return my_array 
 
 array_3d  = list_dim(l,w,h).copy()
 
