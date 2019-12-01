@@ -19,6 +19,8 @@ if found:
 else:
     print("Proceed to counter number 1 for more details. ")
 
+input("Press Enter to continue: ")
+
 # This code is done through in function // Alternate code
 
 #name = input("Enter your name: ")

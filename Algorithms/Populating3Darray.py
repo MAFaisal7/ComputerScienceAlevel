@@ -24,3 +24,5 @@ for i in range(h):
             array_3d[i][m][k] = k
 
 pprint.pprint(array_3d)  # displays array in proper format
+
+input("Press Enter to continue: ")
