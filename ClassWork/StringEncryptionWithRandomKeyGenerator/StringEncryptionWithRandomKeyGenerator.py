@@ -27,7 +27,7 @@ def decrypt(cypher, lookup2):
 
 # Populating key array with random ascii characters
 key = [chr(m) for m in range(128)]  # Read list comprehension to understand the declaration of array/list key
-                                    # generates array of length 128 with numbers from 1 - 127 e.g [1,2,3,4,....,127]
+                                    # generates array of length 128 with numbers from 0 - 127 e.g [0,1,2,3,4,....,127]
                                     # but chr() function turns the numbers into their respective ascii characters
                                     # example [...,97,98,99,...] --> [...,a,b,c,...]
 
