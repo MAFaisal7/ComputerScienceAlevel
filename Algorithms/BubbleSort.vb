@@ -16,7 +16,7 @@ Module Module1
             '- i is done to make to code efficient as the last element of the array will be always sorted after one loop..
             'why -2?:
             '-1 is done because array starts from 0 and we have used the length of list which is always 1 unit greater 
-            'another -1 is done as in vb for loop is lower bound inclusive to upper bound inclusive unlike other programing languages where..
+            'another -1 is done as in vb for loop is lower bound inclusive to upper bound inclusive unlike python where..
             '.. it is lower bound inclusive to upper bound exclusive
             For j = 0 To (l - i - 2)
 
