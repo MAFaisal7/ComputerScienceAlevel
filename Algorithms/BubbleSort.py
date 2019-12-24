@@ -20,7 +20,7 @@ def bubble_sort(my_list):
                 # if swap happens, this will become true
                 swapped = True
                 
-        # if the swap did not happen. swap will remain false hence the list/array is sorted
+        # if the swap did not happen. swapped will remain false hence the list/array is sorted
         # which means we dont need to loop through the array again ( this makes the algorithm efficient)
         if swapped == False:
             break
