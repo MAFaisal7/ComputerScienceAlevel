@@ -10,6 +10,7 @@ def bubble_sort(my_list):
         # -1 is done because array starts from 0 and we have used the length of list which is always 1 unit greater 
         # - i is done to make to code efficient as the last element of the array will be always sorted after one loop..
         # .. so we dont access it again
+        # remember the for loop in python is lower bound inclusive, upper bound exclusive
         for j in range(length - i - 1):
             
             # if the number in current index is greater than the number in the index after that..
